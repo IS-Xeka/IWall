@@ -1,0 +1,6 @@
+@IWall.API_HostAddress = http://localhost:5115
+
+GET {{IWall.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
