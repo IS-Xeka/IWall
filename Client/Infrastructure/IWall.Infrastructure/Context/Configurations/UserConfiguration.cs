@@ -1,5 +1,5 @@
-﻿using Common.IWall.Infrastructure.Configurations;
-using IWall.Domain.Models;
+﻿using Common.IWall.Domain.Models;
+using Common.IWall.Infrastructure.Configurations;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using static Common.IWall.Infrastructure.Configurations.PropertyBuilderHelper;
@@ -8,6 +8,7 @@ namespace IWall.Infrastructure.Context.Configurations;
 
 public class UserConfiguration: IEntityTypeConfiguration<User>
 {
+    public User user = new User();
     public void Configure(EntityTypeBuilder<User> builder)
     {
         builder.HasKey(x => x.Id);
